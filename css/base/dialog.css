@@ -1,0 +1,334 @@
+.dialog {
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.24);
+}
+/* .dialog{
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    background-color: #0000001f;
+    align-items: center;
+    justify-content: center;
+} */
+
+.dialog__content {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: space-between;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 4px;
+    background-color: #fff;
+    padding: 20px 20px 20px 20px;
+    box-sizing: border-box;
+    min-width: 300px; 
+    font-size: 14px; 
+}   
+
+/* .dialog__content{
+    display: flex; 
+    flex-direction: column; 
+    background-color: #ffffff; 
+    border: 1px solid #BBBBBB; 
+    border-radius: 4px; 
+    padding: 20px 20px 20px 20px; 
+    font-family: Font Regular; 
+    font-size: 14px; 
+} */
+
+.dialog__header {
+    border-radius: 4px;
+    padding: 24px 24px 0 24px;
+}
+
+.dialog__body {
+    padding: 24px;
+}
+
+.dialog__msg-item {
+    display: flex;
+    align-items: center;
+    background-size: 16px;
+    background-position: 0 center;
+    background-repeat: no-repeat;
+    background-image: url(../../assets/icon/warning.png);
+    padding-left: 24px;
+}
+
+.dialog__msg-item~.dialog__msg-item {
+    margin-top: 8px;
+}
+
+.dialog__footer {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    background-color: #f5f5f5;
+    box-sizing: border-box;
+    padding: 8px 24px;
+    border-radius: 0 0 4px 4px;
+    flex-direction: row-reverse;
+}
+
+.dialog__footer button~button {
+    margin-right: 8px;
+}
+
+.dialog__footer .button--cancel {
+    background-color: unset;
+    color: #000;
+}
+
+.button--cancel{
+    width: 60px;
+    height: 30px;
+    background-color: #ffffff;
+    outline: none;
+    border: 1px solid #bbbbbb;
+    border-radius: 4px;
+}
+
+.dialog__footer .button--cancel:hover,
+.button--cancel:focus {
+    background-color: #ccc;
+}
+
+.ttnv_row1--img1{
+    position: relative;
+    background: url(../../asset/img/Sprites.64af8f61.svg) no-repeat -89px -145px;
+	width: 22px;
+	height: 22px;
+    outline: none;
+    border: none;
+    bottom: 10px;
+}
+
+/* .dialog__button--close {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 4px 0 4px;
+    width: 40px;
+    height: 40px;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    background-image: url(../../asset/img/Sprites.64af8f61.svg);
+    background-repeat: no-repeat;
+    background-position: -147px -147px;
+    filter: invert(20%) sepia(100%) saturate(3000%)
+} */
+
+.dialog__button--close {
+    position: relative;
+    bottom: 12px;
+    left: 5px;
+    background: url(../../asset/img/Sprites.64af8f61.svg) no-repeat -147px -147px;
+	width: 18px;
+	height: 18px;
+    outline: none;
+    border: none;
+}
+
+.dialog__button--close:hover {
+    background-color: #c24747;
+    filter: unset
+    /* filter: invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%); */
+}
+
+
+/* tessttttt */
+
+
+.fontbold{
+    font-family: Font Bold;
+}
+
+.row1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+.row1-col1{
+    display: flex;
+}
+.ttnv_vaitro{
+    display: flex;
+    margin-left: 20px;
+    align-items: center;
+    
+}
+.ttnv_vaitro1{
+    margin-right: 10px;
+    background-color: #ffffff;
+    border: 1px solid #bbbbbb;
+    color: #ffffff;
+    border-radius: 4px;
+    width: 20px;
+    height: 20px;
+}
+
+.row2{
+    display: flex;
+}
+.ma-ten{
+    display: flex;
+}
+.ngaysinh-gioitinh{
+    display: flex;
+}
+.cmnd-ngaycap{
+    display: flex;
+}
+
+.button-select__gioitinh{
+    display: flex;
+    align-items: center;
+    height: 30px;
+    margin-top: 5px;
+}
+.ttnv_row3-2{
+    display: flex;
+}
+.ttnv_row4{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    border-top: 1px solid #BBBBBB;
+    padding-top: 20px;
+}
+
+.setupinput{
+    border: 1px solid #bbbbbb;
+    border-radius: 4px;
+    padding-left: 10px;
+    outline: none;
+    height: 30px;
+    margin-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
+
+
+.setupinput:focus{
+    border-color: #019160;
+}
+/* .b-nam{
+    width: 20px;
+    height: 20px;
+    border-radius: 30px;
+    outline: none;
+    border: 1px solid #bbbbbb;
+    background-color: #ffffff;
+    padding-left: 2.5px;
+    margin-right: 10px ;
+}
+.gioitinhnam{
+    width: 12px;
+    height: 12px;
+    border: 1px solid #ffffff;
+    border-radius: 12px;
+    
+}
+.b-nu{
+    margin-left: 20px;
+    width: 20px;
+    height: 20px;
+    border-radius: 30px;
+    outline: none;
+    border: 1px solid #bbbbbb;
+    background-color: #ffffff;
+    padding-left: 2.5px;
+    margin-right: 10px ;
+}
+.gioitinhnu{
+    width: 12px;
+    height: 12px;
+    border: 1px solid #ffffff;
+    border-radius: 12px;
+}
+.b-khac{
+    margin-left: 20px;
+    width: 20px;
+    height: 20px;
+    border-radius: 30px;
+    outline: none;
+    border: 1px solid #bbbbbb;
+    background-color: #ffffff;
+    padding-left: 2.5px;
+    margin-right: 10px ;
+}
+.gioitinhkhac{
+    width: 12px;
+    height: 12px;
+    border: 1px solid #ffffff;
+    border-radius: 12px;
+} */
+.inputdonvi{
+    height: 34px;
+    width: 364px;
+}
+.inputdate{
+    height: 32px;
+}
+.inputchucdanh{
+    width: 350px;
+}
+.inputdiachi{
+    width: 725px;
+}
+.inputcmnd{
+    width: 218px;
+}
+.inputnoicap{
+    width: 350px;
+}
+.inputemail{
+    width: 350px;
+}
+
+.cat{
+    width: 60px;
+    height: 30px;
+    background-color: #ffffff;
+    outline: none;
+    border: 1px solid #bbbbbb;
+    border-radius: 4px;
+}
+.catvathem{
+    width: 120px;
+    height: 30px;
+    background-color: #16a14b;
+    outline: none;
+    color: #ffffff;
+    border: 1px solid #bbbbbb;
+    border-radius: 4px;
+}
+
+
+
+@media only screen and (max-width: 1300px){
+    .screen{
+        width: 100%;
+        overflow-x: auto;
+    }
+    
+}   
+.input__error{
+    border: 1px solid red;
+}

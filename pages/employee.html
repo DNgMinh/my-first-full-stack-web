@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/page/employee.css">
+    <title>CUKCUK.VN - Phần mềm quản lý nhà hàng</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header__left">
+                <div class="header__sibar"></div>
+                <div class="header__logo"></div>
+            </div>
+            <div class="header__right">
+                <div>
+                    <select name="" id="">
+                        <option value="1">Nhà hàng hải sản Biển Đông</option>
+                        <option value="1">Nhà hàng Hoàng Mai</option>
+                    </select>
+                </div>
+                <div class="user">
+                    <div class="user__name">Nguyễn Văn Mạnh</div>
+                    <div class="user__avatar"></div>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="menu">
+                <div class="menu__item">
+                    <div class="icon icon-24 icon__menu icon__tongquan"></div>
+                    <div class="menu__text">Tổng quan</div>
+                </div>
+                <div class="menu__item">
+                    <div class="icon icon-24 icon__menu icon__tienmat"></div>
+                    <div class="menu__text">Tiền mặt</div>
+                </div>
+                <div class="menu__item">
+                    <div class="icon icon-24 icon__menu icon__tiengui"></div>
+                    <div class="menu__text">Tiền gửi</div>
+                </div>
+                <div class="menu__item">
+                    <div class="icon icon-24 icon__menu icon__muahang"></div>
+                    <div class="menu__text">Mua hàng</div>
+                </div>
+                <div class="menu__item">
+                    <div class="icon icon-24 icon__menu icon__banhang"></div>
+                    <div class="menu__text">Bán hàng</div>
+                </div>
+                <div class="menu__item">
+                    <div class="icon icon-24 icon__menu icon__hoadon"></div>
+                    <div class="menu__text">Quản lý hóa đơn</div>
+                </div>
+                <div class="menu__item">
+                    <div class="icon icon-24 icon__menu icon__kho"></div>
+                    <div class="menu__text">Kho</div>
+                </div>
+                <div class="menu__item">
+                    <div class="icon icon-24 icon__menu icon__congcu"></div>
+                    <div class="menu__text">Công cụ dụng cụ</div>
+                </div>
+                <div class="menu__item">
+                    <div class="icon icon-24 icon__menu icon__taisan"></div>
+                    <div class="menu__text">Tài sản cố định</div>
+                </div>
+                <div class="menu__item">
+                    <div class="icon icon-24 icon__menu icon__thue"></div>
+                    <div class="menu__text">Thuế</div>
+                </div>
+                <div class="menu__item">
+                    <div class="icon icon-24 icon__menu icon__giathanh"></div>
+                    <div class="menu__text">Giá thành</div>
+                </div>
+                <div class="menu__item">
+                    <div class="icon icon-24 icon__menu icon__tonghop"></div>
+                    <div class="menu__text">Tổng hợp</div>
+                </div>
+                <div class="menu__item">
+                    <div class="icon icon-24 icon__menu  icon__ngansach"></div>
+                    <div class="menu__text">Ngân sách</div>
+                </div>
+                <div class="menu__item">
+                    <div class="icon icon-24 icon__menu  icon__baocao"></div>
+                    <div class="menu__text">Báo cáo</div>
+                </div>
+                <div class="menu__item">
+                    <div class="icon icon-24 icon__menu icon__phantich"></div>
+                    <div class="menu__text">Phân tích tài chính</div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="page__header">
+                    <div class="page__header--title heading">Danh sách nhân viên</div>
+                    <button id="btnAdd" class="page__header--button button button__icon button__icon--employee">Thêm mới nhân viên</button>
+                </div>
+                <div class="page__toolbar">
+                    <div class="page__toolbar--left">
+                        <input type="text" class="input input__icon input__icon--search" id = "search">
+                    </div>
+                    <div class="page__toolbar--right">
+                        <button id="btnDelete"></button>
+                        <button id="btnDuplicate"></button>
+                        <button id="btnRefresh"></button>
+                    </div>
+                </div>
+                <div class="page__table">
+                    <div class="table__content">
+                        <table id="tbEmployeeList" class="table" border="0">
+                            <thead>
+                                <tr>
+                                    <th propValue="employeeCode" class="text-align--left" style="width:100px">MÃ NHÂN VIÊN</th>
+                                    <th propValue="employeeName" class="text-align--left">TÊN NHÂN VIÊN</th>
+                                    <th propValue="gender" format="gender" class="text-align--left" style="width:50px">GIỚI TÍNH</th>
+                                    <th propValue="dateOfBirth" format="date" class="text-align--center" style="width:100px">NGÀY SINH</th>
+                                    <th propValue="identityNumber" class="text-align--left" style="width:150px">SỐ CMND</th>
+                                    <th propValue="office" class="text-align--left" style="width:200px">CHỨC DANH</th>
+                                    <th propValue="unit" class="text-align--left" style="width:200px">TÊN ĐƠN VỊ</th>
+                                    <th propValue="bankAccount" format="money" class="text-align--right" style="width:150px">SỐ TÀI KHOẢN</th>
+                                    <th propValue="bankName" class="text-align--left" style="width:150px">TÊN NGÂN HÀNG</th>
+                                    <th propValue="bankBranch" class="text-align--left" style="width:150px">CHI NHÁNH TK NGÂN HÀNG</th>
+                                    <th propValue="function" class="text-align--left" style="width:150px">CHỨC NĂNG</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="table__paging">
+                        <div class="table__paging--left">
+                            Hiển thị <b>01-10/200</b> nhân viên
+                        </div>
+                        <div class="table__paging--center">
+                            <button class="paging__button paging__button--first"></button>
+                            <button class="paging__button paging__button--prev"></button>
+                            <div class="paging__button--group">
+                                <button class="paging__number paging__number--selected" value="1">1</button>
+                                <button class="paging__number" value="2">2</button>
+                                <button class="paging__number" value="3">3</button>
+                                <button class="paging__number" value="4">4</button>
+                                <button class="paging__number" value="5">5</button>
+                                <button class="paging__number" value="6">6</button>
+                            </div>
+                            <button class="paging__button paging__button--next"></button>
+                            <button class="paging__button paging__button--last"></button>
+                        </div>
+                        <div class="table__paging--right">
+                            <select name="" class="combobox page__limit">
+                                <option value="10" selected>10 nhân viên/ trang</option>
+                                <option value="20">20 nhân viên/ trang</option>
+                                <option value="30">30 nhân viên/ trang</option>
+                                <option value="40">40 nhân viên/ trang</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="dlgEmployeeDetail" class="dialog" hidden>
+        <div class="dialog__content">
+            <div class="row1">
+                <div class="row1-col1">
+                    <div class="fontbold" style="font-size: 24px;">Thông tin nhân viên</div>
+                    <div class="ttnv_vaitro">
+                        <button class="ttnv_vaitro1">x</button>
+                        <div>Là khách hàng</div>
+                    </div>
+                    <div class="ttnv_vaitro">
+                        <button class="ttnv_vaitro1">x</button>
+                        <div>Là nhà cung cấp</div>
+                    </div>
+                </div>                
+                <div class="ttnv_row1--img">
+                    <button class="ttnv_row1--img1"></button>
+                    <button id="btnClose2" class="dialog__button--close"></button>
+                </div>
+            </div>
+            <div class="row2">
+                <div class="ttnv_row2--tt1">
+                    <div class="ma-ten">
+                        <div class="ma fontbold">
+                            <div>Mã <span style="color: red;">*</span></div>
+                            <input propValue="employeeCode" type="text" class="setupinput inpukhacrong require" id="txtEmployeeCode" >
+                        </div>
+                        <div class="ten fontbold">
+                            <div>Tên <span style="color: red;">*</span></div>
+                            <input propValue="employeeName" type="text" class="setupinput inpukhacrong require" >
+                        </div>
+                    </div>
+                    <div class="don-vi fontbold">
+                        <div>Đơn vị <span style="color: red;">*</span></div>
+                        <select propValue="unit" name="combobox" id="" class="setupinput inputdonvi inpukhacrong require" >
+                            <option value=""></option>
+                            <option value="Phòng kĩ thuật">Phòng kĩ thuật</option>
+                            <option value="Phòng nhân sự">Phòng nhân sự</option>
+                            <option value="Phòng tài chính">Phòng tài chính</option>
+                            <option value="Phòng hỗ trợ khách hàng">Phòng hỗ trợ khách hàng</option>
+                            <option value="Ban sản xuất">Ban sản xuất</option>
+                            <option value="Ban giám đốc">Ban giám đốc</option>
+                            <option value="Ban quản lý">Ban quản lý</option>
+                        </select>
+                    </div>
+                    <div class="chuc-danh fontbold ">
+                        <div>Chức danh</div>
+                        <select name="" id="cbxPosition" propvalue = "office" class="setupinput inputchucdanh">
+                            <option value="" selected></option>
+                            <option value="Giám đốc">Giám đốc</option>
+                            <option value="Nhân viên">Nhân viên</option>
+                            <option value="Trưởng phòng">Trưởng phòng</option>
+                            <option value="Thực tập sinh">Thực tập sinh</option>
+                            <option value="Chủ tịch">Chủ tịch</option>            
+                            <option value="Bảo vệ">Bảo vệ</option>                 
+                            <option value="Quản lý">Quản lý</option>                 
+                        </select>
+                    </div>
+                </div>
+                <div class="ttnv_row2--tt2">
+                    <div class="ngaysinh-gioitinh">
+                        <div class="ngay-sinh fontbold">
+                            <div>Ngày sinh</div>
+                            <input propValue="dateOfBirth" type="date" class="setupinput inputdate">
+                        </div>
+                        <div class="gioitinh">
+                            <div class="fontbold">Giới tính</div>
+                            <select propValue="gender" name="combobox" id="" class="setupinput inputdonvi" style="width: 232px;">
+                                <option value="" selected></option>
+                                <option value="0">Nam</option>
+                                <option value="1">Nữ</option>
+                                <option value="2">Khác</option>                                
+                        </select>
+                        </div>
+                    </div>
+                    <div class="cmnd-ngaycap">
+                        <div class="cmnd fontbold">
+                            <div>Số CMND</div>
+                            <input propValue="identityNumber" type="text" class="setupinput inputcmnd">
+                        </div>
+                        <div class="ngaycap fontbold">
+                            <div>Ngày cấp</div>
+                            <input propValue="identityDate" type="date" class="setupinput inputdate">
+                        </div>
+                    </div>
+                    <div class="noicap fontbold">
+                        <div>Nơi cấp</div>
+                        <input propValue="identityPlace" type="text" class="setupinput inputnoicap">
+                    </div>
+                </div>
+            </div>
+            <div class="ttnv_row3">
+                <div class="diachi fontbold">
+                    <div>Địa chỉ</div>
+                    <input propValue="address" type="text" class="setupinput inputdiachi">
+                </div>
+                <div class="ttnv_row3-2">
+                    <div class="dtdidong fontbold">
+                        <div>Điện thoại di động</div>
+                        <input propValue="phoneNumber" type="text" class="setupinput">
+                    </div>
+                    <div class="fontbold">
+                        <div>Email</div>
+                        <input propValue="email" type="email" class="setupinput inputemail">
+                    </div>
+                </div>
+                <div class="ttnv_row3-2">
+                    <div class="dtdidong fontbold">
+                        <div>Tài khoản ngân hàng</div>
+                        <input propValue="bankAccount" type="text" class="setupinput">
+                    </div>
+                    <div class="dtcodinh fontbold">
+                        <div>Tên ngân hàng</div>
+                        <input propValue="bankName" type="text" class="setupinput">
+                    </div>
+                    <div class="fontbold">
+                        <div>Chi nhánh</div>
+                        <input propValue="bankBranch" type="text" class="setupinput">
+                    </div>
+                </div>
+            </div>
+            <div class="ttnv_row4">
+                <button id="btnCancelAdd" class="button--cancel fontbold">Hủy</button>
+                <div>
+                    <button id="btnSave" class="cat fontbold">Cất</button>
+                    <button id="btnSaveAndAdd" class="catvathem fontbold">Cất và thêm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dialog cảnh báo -->
+    <!-- <div id="dlgDialog1" class="dialog dialog--warning" hidden>
+        <div class="dialog__content">
+            <div id="btnClose1" class="dialog__button--close"></div>
+            <div class="dialog__header title">Thông báo</div>
+            <div class="dialog__body">
+                <div class="dialog__msg-item">
+                    Thông tin này không được phép để trống
+                </div>
+                <div class="dialog__msg-item">
+                    Thông tin này không được phép để trống
+                </div>
+                <div class="dialog__msg-item">
+                    Thông tin này không được phép để trống
+                </div>
+            </div>
+            <div class="dialog__footer">
+                <button id="btnOk" class="button">Đồng ý</button>
+            </div>
+        </div>
+    </div> -->
+
+    <div id="dialogDelete" class="dialog dialog--warning" hidden>
+        <div class="dialog__content">
+            <div id="btnClose3" class="dialog__button--close"></div>
+            <div class="dialog__header title">Thông báo</div>
+            <div class="dialog__body" id="confirmDelete"></div>
+            <div class="dialog__footer">
+                <button id="btnOkDelete" class="button">Đồng ý</button>
+                <button id="btnCancelDelete" class="button">Hủy</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- loading -->
+    <div id="dlgEmployeeDetail" class="loading" hidden>
+        <div class="loading__content">
+            <div class="loading__icon"></div>
+            <div class="loading__text">Đang xử lý</div>
+        </div>
+    </div>
+
+    <!-- nhúng các thư viện -->
+    <script src="../js/jquery-3.6.0.min.js"></script>
+
+    <!-- Nhúng các js dùng chung -->
+
+    <!-- Nhúng các js sử dụng riêng cho trang -->
+    <script src="../js/pages/employee.js"></script>
+
+</body>
+
+</html>

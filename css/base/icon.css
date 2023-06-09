@@ -1,0 +1,86 @@
+.icon {
+    background-repeat: no-repeat;
+}
+
+.icon-16 {
+    width: 16px;
+    height: 16px;
+}
+
+.icon-24 {
+    width: 24px;
+    height: 24px;
+}
+
+.icon-32 {
+    width: 32px;
+    height: 32px;
+}
+
+.icon__menu {
+    background-image: url(../../asset/img/Sprites.64af8f61.svg);
+}
+
+.icon__tongquan {
+    background-position: -30px -1628px;
+}
+
+.icon__tienmat {
+    background-position: -73px -1628px;
+}
+
+.icon__tiengui {
+    background-position: -117px -1628px;
+}
+
+.icon__muahang {
+    background-position: -161px -1628px;
+}
+
+.icon__banhang {
+    background-position: -204px -1628px;
+}
+
+.icon__hoadon {
+    background-position: -249px -1628px;
+}
+
+.icon__kho {
+    background-position: -290px -1630px;
+}
+
+.icon__congcu {
+    background-position: -336px -1628px;
+}
+
+.icon__taisan {
+    background-position: -378px -1628px;
+}
+
+.icon__thue {
+    background-position: -423px -1628px;
+}
+
+.icon__giathanh {
+    background-position: -467px -1628px;
+}
+
+.icon__tonghop {
+    background-position: -510px -1628px;
+}
+
+.icon__ngansach {
+    background-position: -547px -1628px;
+}
+
+.icon__baocao {
+    background-position: -590px -1630px;
+}
+
+.icon__phantich {
+    background-position: -633px -1630px;
+}
+
+.icon--save {
+    background-image: url(../../assets/icon/save.svg);
+}
